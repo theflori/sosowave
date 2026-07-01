@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<!--
+  Sophia Lüders, Editorial Portfolio
+  ==================================================================
+  FOTOS EINSETZEN
+  Lege einen Ordner  images/  neben diese Datei und benenne die
+  Exporte exakt so (Seitenverhältnis in Klammern):
+    hero.jpg (hochkant, vollflächig)      about.jpg (3:4)
+    Selected Work, alle Portrait 3:4:
+      editorial-01/02/03.jpg   fashion-01/02.jpg
+      campaign-01/02.jpg       polas-01/02.jpg
+    Featured In (3:4):  featured-01/02/03/04.jpg
+    Campaigns:  campaigns-01.jpg (16:9)  campaigns-02.jpg (3:2)  campaigns-03.jpg (3:2)
+    Film: YouTube-Embed (kein Bild)
+  Fehlt eine Datei, bleibt ein ruhiger Platzhalter stehen.
+  Instagram lädt live über die drei Post-Links im Instagram-Bereich.
+  ==================================================================
+-->
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, flogowallinitial-scale=1.0" />
+<title>Sophia Lüders, Fashion Model in Munich</title>
+<meta name="description" content="Sophia Lüders, an international model working across high-fashion editorials, magazine covers and global campaigns. Represented by Most Wanted Models and Francina Models." />
+<meta name="author" content="Sophia Lüders" />
+<link rel="canonical" href="https://sophialuders.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Sophia Lüders, Fashion Model in Munich" />
+<meta property="og:description" content="International model. High-fashion editorials, magazine covers and global campaigns." />
+<meta property="og:url" content="https://sophialuders.com/" />
+<meta property="og:image" content="images/hero.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..460&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Sophia Lüders","alternateName":"Soso","jobTitle":"Fashion Model","gender":"Female","height":"177 cm","address":{"@type":"PostalAddress","addressLocality":"Munich","addressCountry":"DE"},"url":"https://sophialuders.com/","sameAs":["https://www.instagram.com/sosowave/","https://www.mostwantedmodels.com/women/all/1848-sophia-l/","https://francinamodels.com/w/models/womdir/womdir-15274-sophia-l"]}
+</script>
+
+<style>
+  :root{
+    --paper:#FBFAF6; --ivory:#F3EFE6; --sand:#E7E0D2; --line:#D9D1C1;
+    --ink:#1B1815; --charcoal:#57514A; --mute:#877F72;
+
+    --serif:"Fraunces", Georgia, "Times New Roman", serif;
+    --sans:"Hanken Grotesk", Helvetica, Arial, sans-serif;
+
+    --maxw:1440px;
+    --pad:clamp(1.5rem, 5.5vw, 5rem);       /* consistent horizontal padding, every section */
+    --section:clamp(4.75rem, 10vw, 9rem);   /* consistent vertical rhythm */
+
+    /* Balanced type scale */
+    --fs-hero:clamp(3.5rem, 17vw, 12rem);
+    --fs-display:clamp(2rem, 5.4vw, 3.4rem);
+    --fs-lead:clamp(1.65rem, 4.4vw, 2.4rem);
+    --fs-name-foot:clamp(3.25rem, 15vw, 12rem);
+    --fs-body:clamp(1.0625rem, .35vw + 1rem, 1.175rem);
+    --fs-small:clamp(.8rem, .4vw + .72rem, .875rem);
+    --fs-label:clamp(.75rem, .3vw + .68rem, .8rem);
+
+    --ease:cubic-bezier(.22,1,.36,1);
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:var(--sans);font-weight:400;font-size:var(--fs-body);
+    line-height:1.65;letter-spacing:.003em;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  h1,h2,h3,h4,p,dl,dd,figure,ul{margin:0}
+  ul{list-style:none;padding:0}
+  ::selection{background:var(--ink);color:var(--paper)}
+  :focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+
+  .skip{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;
+    padding:.6rem 1rem;z-index:200;border-radius:2px}
+  .skip:focus{left:1rem;top:1rem}
+
+  /* ---------- layout primitives ---------- */
+  .container{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)}
+  .section{padding-block:var(--section)}
+  .section--ivory{background:var(--ivory)}
+
+  .eyebrow{font-weight:500;font-size:clamp(.82rem,.6vw + .6rem,1rem);letter-spacing:.2em;
+    text-transform:uppercase;color:var(--charcoal)}
+
+  .folio{display:flex;align-items:baseline;justify-content:space-between;gap:1.5rem;
+    padding-bottom:1.1rem;border-bottom:1px solid var(--line);
+    margin-bottom:clamp(2.25rem,5vw,4rem)}
+  .folio__idx{font-family:var(--serif);font-style:italic;font-weight:300;
+    font-size:1rem;color:var(--mute)}
+
+  /* ---------- mixed headline ---------- */
+  .mix{line-height:1.12;letter-spacing:-.006em;color:var(--ink)}
+  .mix .ser{font-family:var(--serif);font-style:italic;font-weight:300;font-size:1.06em;color:inherit}
+  .mix .san{font-family:var(--sans);font-style:normal;font-weight:400;letter-spacing:0;color:inherit}
+
+  /* ---------- reveal ---------- */
+  .reveal{opacity:0;transform:translateY(24px);
+    transition:opacity 1.05s var(--ease),transform 1.05s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+  .d1{transition-delay:.09s}.d2{transition-delay:.18s}.d3{transition-delay:.27s}
+
+  /* ---------- plate (image slot) ---------- */
+  .plate{position:relative;aspect-ratio:var(--ratio,3/4);overflow:hidden;
+    background:linear-gradient(135deg,var(--sand),#DDD3C1);
+    box-shadow:inset 0 0 0 1px #CFC5B2}
+  .plate__img{width:100%;height:100%;object-fit:cover;object-position:center;
+    opacity:0;transition:opacity 1.2s var(--ease)}
+  .plate.is-loaded{background:var(--ivory);box-shadow:none}
+  .plate.is-loaded .plate__img{opacity:1}
+  .plate__hint{position:absolute;inset:0;display:flex;flex-direction:column;
+    justify-content:flex-end;gap:.35rem;padding:clamp(1rem,2.5vw,1.5rem)}
+  .plate.is-loaded .plate__hint{display:none}
+  .plate__hint::before{content:"";position:absolute;top:clamp(1rem,2.5vw,1.5rem);
+    left:clamp(1rem,2.5vw,1.5rem);width:26px;height:1px;background:var(--charcoal)}
+  .plate__hint-label{font-family:var(--serif);font-style:italic;
+    font-size:clamp(1.15rem,3vw,1.6rem);color:var(--charcoal)}
+  .plate__hint-file{font-size:var(--fs-small);letter-spacing:.12em;
+    text-transform:uppercase;color:var(--mute)}
+
+  .cap{margin-top:.85rem;display:flex;gap:.6rem;align-items:baseline;
+    font-size:var(--fs-small);letter-spacing:.14em;text-transform:uppercase;color:var(--charcoal)}
+  .cap__n{font-family:var(--serif);font-style:italic;text-transform:none;
+    letter-spacing:0;color:var(--mute)}
+
+  /* =========================================================
+     HEADER + NAV
+  ========================================================= */
+  .site-head{position:fixed;top:0;left:0;right:0;z-index:100;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:clamp(1rem,2vw,1.6rem) var(--pad);color:#fff;
+    transition:background .4s var(--ease),color .4s var(--ease),border-color .4s}
+  .site-head::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+    background:linear-gradient(to bottom,rgba(20,18,15,.45),rgba(20,18,15,0));
+    transition:opacity .4s var(--ease)}
+  .site-head.is-solid{background:var(--paper);color:var(--ink);border-bottom:1px solid var(--line)}
+  .site-head.is-solid::before{opacity:0}
+  .site-head.menu-open{background:transparent;color:#fff;border-bottom-color:transparent}
+  .site-head.menu-open::before{opacity:0}
+  .brand{font-family:var(--serif);font-weight:400;font-size:clamp(1.1rem,2.4vw,1.35rem);
+    letter-spacing:-1.5px;text-decoration:none;white-space:nowrap}
+  .nav-inline{display:flex;align-items:center;gap:clamp(1.5rem,2.6vw,2.6rem)}
+  .nav-inline a{font-size:.84rem;letter-spacing:.13em;text-transform:uppercase;
+    font-weight:500;text-decoration:none;opacity:.92;transition:opacity .3s}
+  .nav-inline a:hover{opacity:1}
+  .nav-inline .nav-ig{font-family:var(--serif);text-transform:none;letter-spacing:0;
+    font-style:italic;font-size:1rem;opacity:1;padding-left:clamp(1rem,2vw,1.75rem);
+    border-left:1px solid currentColor}
+
+  .burger{display:none;width:46px;height:46px;flex-direction:column;justify-content:center;
+    align-items:center;gap:6px;background:none;border:0;padding:0;cursor:pointer;color:inherit}
+  .burger span{display:block;width:26px;height:1.6px;background:currentColor;
+    transition:transform .45s var(--ease),opacity .3s}
+  .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7.6px) rotate(45deg)}
+  .burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7.6px) rotate(-45deg)}
+
+  .menu{position:fixed;inset:0;z-index:90;background:var(--ink);color:var(--paper);
+    display:flex;flex-direction:column;justify-content:center;align-items:center;
+    gap:clamp(1.1rem,3vw,1.6rem);padding:var(--pad);
+    opacity:0;visibility:hidden;transform:translateY(-16px);
+    transition:opacity .5s var(--ease),transform .5s var(--ease),visibility .5s}
+  .menu.open{opacity:1;visibility:visible;transform:none}
+  .menu a{font-family:var(--serif);font-weight:300;font-size:clamp(2rem,9vw,3rem);
+    text-decoration:none;color:var(--paper)}
+  .menu a.menu__ig{font-style:italic;font-size:clamp(1.15rem,5vw,1.5rem);
+    margin-top:1.25rem;opacity:.85}
+
+  /* =========================================================
+     HERO
+  ========================================================= */
+  .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;
+    justify-content:flex-end;overflow:hidden}
+  .hero__media{position:absolute;inset:0;z-index:0}
+  .hero__media .plate{height:100%;aspect-ratio:auto}
+  .hero__media .plate__hint{justify-content:center;align-items:center;text-align:center}
+  .hero__scrim{position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:linear-gradient(to bottom,rgba(20,18,15,.34) 0%,rgba(20,18,15,0) 20%,rgba(20,18,15,0) 50%,rgba(20,18,15,.5) 100%)}
+  .hero__topline{position:absolute;z-index:2;top:clamp(4.75rem,11vh,7.5rem);
+    left:var(--pad);right:var(--pad);display:flex;justify-content:space-between;
+    gap:1rem;color:#fff}
+  .hero__inner{position:relative;z-index:2;color:#fff;
+    padding:0 var(--pad) clamp(2.25rem,6vh,4.5rem)}
+  .hero__name{font-family:var(--serif);font-weight:300;font-size:var(--fs-hero);
+    line-height:.86;letter-spacing:-.02em}
+  .hero__name .ital{font-style:italic}
+  .hero__meta{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;
+    margin-top:clamp(1.1rem,2.5vh,2rem);flex-wrap:wrap}
+  .hero__meta p{max-width:34ch;font-size:var(--fs-small);color:rgba(255,255,255,.92)}
+  .hero__scroll{font-size:var(--fs-label);letter-spacing:.22em;text-transform:uppercase;
+    color:rgba(255,255,255,.92);white-space:nowrap}
+
+  /* =========================================================
+     INTRO
+  ========================================================= */
+  .intro__mix{font-size:clamp(1.95rem,4.2vw,3.15rem);line-height:1.18;max-width:26ch;text-align:center;margin-inline:auto}
+
+  /* =========================================================
+     SELECTED WORK
+  ========================================================= */
+  .work__filters{display:flex;flex-wrap:wrap;gap:.5rem 1.75rem;margin-bottom:clamp(2rem,4vw,3rem)}
+  .work__filter{background:none;border:0;padding:.3rem 0;cursor:pointer;font:inherit;
+    font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;
+    color:var(--mute);position:relative;transition:color .3s}
+  .work__filter::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;
+    background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+  .work__filter:hover{color:var(--ink)}
+  .work__filter[aria-pressed="true"]{color:var(--ink)}
+  .work__filter[aria-pressed="true"]::after{transform:scaleX(1)}
+  .work__gallery{--wgap:clamp(1rem,2.5vw,2rem);display:flex;flex-wrap:wrap;gap:var(--wgap);
+    align-items:flex-start;transition:opacity .35s var(--ease)}
+  .work__gallery.is-filtering{opacity:0}
+  .work-item{flex-grow:0;flex-shrink:0}
+  .work-item.w2{flex-basis:calc((100% - var(--wgap)) / 2)}
+  .work-item.w3{flex-basis:calc((100% - 2 * var(--wgap)) / 3)}
+  .work-item .plate{aspect-ratio:3/4}
+  .work-item.is-hidden{display:none}
+  @media(max-width:640px){.work-item.w2,.work-item.w3{flex-basis:100%}}
+
+  /* =========================================================
+     GALLERY
+  ========================================================= */
+  .g-grid{display:grid;gap:clamp(2.75rem,6vw,3.5rem)}
+  .g-full{margin-block:clamp(2.75rem,6vw,3.5rem)}
+  .g-full .plate{aspect-ratio:16/10}
+
+  /* =========================================================
+     ABOUT
+  ========================================================= */
+  .about__grid{display:grid;gap:clamp(2rem,5vw,3.5rem)}
+  .about__lead{font-size:var(--fs-lead);line-height:1.14;max-width:22ch;margin-bottom:1.5rem}
+  .about__para{max-width:48ch;color:var(--charcoal)}
+  .physique{margin-top:clamp(3rem,7vw,4.5rem);padding-top:clamp(1.75rem,3vw,2.5rem);
+    border-top:1px solid var(--line)}
+  .physique__title{display:block;margin-bottom:clamp(1.5rem,3vw,2.25rem)}
+  .physique__grid{display:grid;grid-template-columns:1fr 1fr;
+    gap:clamp(1.4rem,3vw,2rem) clamp(1.5rem,4vw,4rem)}
+  .physique__grid > div{border-top:1px solid var(--line);padding-top:.85rem}
+  .physique__grid dt{font-size:var(--fs-label);letter-spacing:.16em;text-transform:uppercase;
+    color:var(--mute);margin-bottom:.4rem}
+  .physique__grid dd{font-family:var(--serif);font-weight:340;
+    font-size:clamp(1.05rem,2.4vw,1.3rem);color:var(--ink)}
+
+  /* =========================================================
+     REPRESENTATION
+  ========================================================= */
+  .rep__list{display:grid}
+  .rep__item{display:block;text-decoration:none;position:relative;
+    padding:clamp(1.75rem,4vw,2.75rem) 0;
+    transition:padding-left .5s var(--ease)}
+  .rep__item:hover{padding-left:1rem}
+  .rep__name{font-family:var(--serif);font-weight:300;
+    font-size:clamp(1.7rem,5vw,2.4rem);line-height:1.05;display:flex;align-items:center;gap:.75rem}
+  .rep__name .arrow{font-size:.85em;opacity:.55;transition:transform .4s var(--ease),opacity .3s}
+  .rep__item:hover .arrow{opacity:1;transform:translateX(4px)}
+  .rep__meta{margin-top:.7rem;font-size:var(--fs-small);letter-spacing:.13em;
+    text-transform:uppercase;color:var(--mute)}
+
+  /* =========================================================
+     INSTAGRAM
+  ========================================================= */
+  .insta__head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;
+    gap:1rem 2rem;margin-bottom:clamp(2rem,4vw,3rem)}
+  .insta__lead{font-family:var(--serif);font-weight:300;font-size:var(--fs-lead);line-height:1.2}
+  .insta__lead a{font-style:italic;text-decoration:none;border-bottom:1px solid currentColor;
+    padding-bottom:2px}
+  .ig-cta{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;
+    font-weight:500;font-size:.9rem;letter-spacing:.03em;
+    border:1px solid var(--ink);border-radius:100px;padding:.7rem 1.35rem;
+    transition:background .35s var(--ease),color .35s var(--ease);white-space:nowrap}
+  .ig-cta:hover{background:var(--ink);color:var(--paper)}
+  .ig-embeds{display:grid;grid-template-columns:1fr;gap:clamp(1rem,2vw,1.4rem);align-items:start}
+  .ig-embeds .instagram-media{margin:0 auto !important;min-width:0 !important;width:100% !important}
+
+  /* =========================================================
+     CONTACT
+  ========================================================= */
+  .contact__grid{display:grid;gap:clamp(2rem,5vw,3rem)}
+  .contact__mail{font-family:var(--serif);font-weight:300;
+    font-size:clamp(1.05rem,5.2vw,3.4rem);line-height:1.1;letter-spacing:-.015em;
+    text-decoration:none;display:inline-block;white-space:nowrap}
+  .contact__mail:hover{font-style:italic}
+  .contact__side p{max-width:34ch;color:var(--charcoal);font-size:var(--fs-body)}
+  .contact__ig{display:inline-block;margin-top:1.25rem;font-family:var(--serif);
+    font-style:italic;font-size:1.15rem;text-decoration:none;
+    border-bottom:1px solid currentColor;padding-bottom:2px}
+
+  /* =========================================================
+     FOOTER
+  ========================================================= */
+  /* LOGO WALL */
+  .logowall{padding:clamp(2rem,4vw,3rem);
+    ;text-align:center}
+  .logowall__title{display:block;margin-bottom:clamp(1.75rem,3.5vw,2.5rem)}
+  .logowall__row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
+    gap:clamp(1.75rem,5vw,4rem)}
+  .logo{position:relative;height:clamp(22px,3.5vw,32px);display:inline-flex;align-items:center}
+  .logo__img{height:100%;width:auto;object-fit:contain;filter:grayscale(1);opacity:0;
+    transition:opacity .6s var(--ease)}
+  .logo.is-loaded .logo__img{opacity:.55}
+  .logo__ph{font-family:var(--serif);font-style:italic;
+    font-size:clamp(.95rem,2.2vw,1.15rem);color:var(--mute);white-space:nowrap}
+  .logo.is-loaded .logo__ph{display:none}
+
+  /* FILM */
+  .film__frame{position:relative;width:100%;aspect-ratio:16/9;background:var(--ink);overflow:hidden}
+  .film__frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* FEATURED IN */
+  .featured__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(1rem,2.5vw,2rem)}
+  .featured__grid .plate{aspect-ratio:3/4}
+
+  /* CAMPAIGNS */
+  .camp{display:grid;gap:clamp(1.5rem,3vw,2.5rem)}
+  .camp-wide .plate{aspect-ratio:16/9}
+  .camp__row{display:grid;grid-template-columns:1fr;gap:clamp(1.5rem,3vw,2.5rem)}
+  .camp__row .plate{aspect-ratio:3/2}
+
+  .foot{background:var(--ink);color:var(--paper);
+    padding:clamp(3.5rem,8vw,7rem) 0 clamp(2rem,4vw,2.5rem)}
+  .foot a{text-decoration:none;color:inherit}
+  .foot__name{font-family:var(--serif);font-weight:300;font-size:var(--fs-name-foot);
+    line-height:.9;letter-spacing:-.02em}
+  .foot__cols{display:grid;grid-template-columns:1fr 1fr;gap:2rem 1.5rem;
+    margin-top:clamp(3rem,7vw,5.5rem);padding-top:2.5rem;
+    border-top:1px solid rgba(255,255,255,.16)}
+  .foot__col h4{margin-bottom:1.1rem;font-size:var(--fs-label);letter-spacing:.18em;
+    text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:500}
+  .foot__col li{margin-bottom:.6rem}
+  .foot__col a{font-size:var(--fs-body);color:rgba(255,255,255,.85);transition:color .3s}
+  .foot__col a:hover{color:#fff}
+  .foot__bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.75rem 1rem;
+    margin-top:clamp(3rem,6vw,4.5rem);font-size:var(--fs-small);letter-spacing:.08em;
+    text-transform:uppercase;color:rgba(255,255,255,.45)}
+
+  /* =========================================================
+     RESPONSIVE, mobile-first, layered up
+  ========================================================= */
+  @media (min-width:640px){
+    .ig-embeds{grid-template-columns:1fr 1fr}
+  }
+
+  @media (min-width:768px){
+    .about__grid{grid-template-columns:5fr 7fr;gap:clamp(2.5rem,5vw,5rem);align-items:start}
+    .physique__grid{grid-template-columns:repeat(3,1fr)}
+    .rep__list{grid-template-columns:1fr 1fr;column-gap:clamp(2rem,5vw,5rem)}
+    .rep__list .rep__item:nth-child(2){padding-left:0}
+    .contact__grid{grid-template-columns:1fr 1fr;align-items:end}
+    .foot__cols{grid-template-columns:repeat(3,1fr);gap:2rem}
+    .featured__grid{grid-template-columns:repeat(4,1fr)}
+    .camp__row{grid-template-columns:1fr 1fr}
+    .contact__mail{font-size:clamp(1rem,2.4vw,2.4rem)}
+    .g-full .plate{aspect-ratio:2/1}
+  }
+
+  @media (min-width:1024px){
+    .ig-embeds{grid-template-columns:repeat(3,1fr)}
+
+
+    .g-grid{grid-template-columns:repeat(12,1fr);column-gap:clamp(1.5rem,2.5vw,2.5rem);
+      row-gap:0;align-items:end}
+    .g-1{grid-column:1 / 6}
+    .g-2{grid-column:7 / 13}
+    .g-3{grid-column:2 / 6}
+    .g-4{grid-column:6 / 10;margin-top:clamp(3rem,8vw,7rem)}
+    .g-5{grid-column:8 / 13}
+    .g-full .plate{aspect-ratio:21/9}
+  }
+
+  /* nav / hero switch */
+  @media (max-width:900px){
+    .nav-inline{display:none}
+    .burger{display:flex}
+    .hero__topline{justify-content:center;gap:.5rem 1.25rem;flex-wrap:wrap}
+    .hero__inner{text-align:center}
+    .hero__meta{flex-direction:column;align-items:center;gap:.65rem;text-align:center}
+    .hero__meta p{max-width:32ch}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{scroll-behavior:auto !important;transition:none !important}
+    .reveal{opacity:1;transform:none}
+  }
+</style>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body id="top">
+
+<a class="skip" href="#work">Skip to content</a>
+
+<header class="site-head" id="head">
+  <a href="#top" class="brand">Sophia&nbsp;Lüders</a>
+  <nav class="nav-inline" aria-label="Primary">
+    <a href="#work">Work</a>
+    <a href="#featured">Featured</a>
+    <a href="#campaigns">Campaigns</a>
+    <a href="#about">About</a>
+    <a href="#representation">Representation</a>
+    <a href="#contact">Contact</a>
+    <a class="nav-ig" href="https://www.instagram.com/sosowave/" target="_blank" rel="noopener">@sosowave&nbsp;&#8599;</a>
+  </nav>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav class="menu" id="menu" aria-label="Mobile">
+  <a href="#work">Work</a>
+  <a href="#featured">Featured</a>
+  <a href="#campaigns">Campaigns</a>
+  <a href="#about">About</a>
+  <a href="#representation">Representation</a>
+  <a href="#contact">Contact</a>
+  <a class="menu__ig" href="https://www.instagram.com/sosowave/" target="_blank" rel="noopener">@sosowave &#8599;</a>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="hero" aria-label="Sophia Lüders">
+    <div class="hero__media">
+      <div class="plate" style="--ratio:auto">
+        <img class="plate__img" src="images/hero.jpg" alt="Sophia Lüders" fetchpriority="high" />
+        <span class="plate__hint" aria-hidden="true">
+          <span class="plate__hint-label">Hero</span>
+          <span class="plate__hint-file">images/hero.jpg</span>
+        </span>
+      </div>
+    </div>
+    <div class="hero__scrim"></div>
+
+    <div class="hero__topline">
+      <span class="eyebrow" style="color:#fff">Fashion Model</span>
+      <span class="eyebrow" style="color:#fff">Munich, DE</span>
+    </div>
+
+    <div class="hero__inner">
+      <h1 class="hero__name">Sophia<br /><span class="ital">Lüders</span></h1>
+      <div class="hero__meta">
+        <p>Editorial and campaign work.</p>
+        <span class="hero__scroll">Scroll &#8595;</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section" id="intro">
+    <div class="container">
+      <h2 class="mix intro__mix reveal">
+        <span class="ser">Sophia Lüders</span> <span class="san">is an international model working across high-fashion editorials, magazine covers and global campaigns.</span>
+      </h2>
+    </div>
+  </section>
+
+  <!-- SELECTED WORK -->
+  <section class="section" id="work">
+    <div class="container">
+      <div class="folio reveal">
+        <span class="eyebrow">Selected Work</span><span class="folio__idx">i.</span>
+      </div>
+
+      <div class="work__filters reveal" role="group" aria-label="Filter work by category">
+        <button class="work__filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="work__filter" data-filter="editorial" aria-pressed="false">Editorial</button>
+        <button class="work__filter" data-filter="fashion" aria-pressed="false">Fashion</button>
+        <button class="work__filter" data-filter="campaign" aria-pressed="false">Campaign</button>
+        <button class="work__filter" data-filter="polas" aria-pressed="false">Polas</button>
+      </div>
+      <div class="work__gallery reveal" id="workGallery">
+        <figure class="work-item w2" data-cat="editorial">
+          <div class="plate" style="--ratio:3/4">
+            <img class="plate__img" src="images/editorial-01.jpg" alt="Editorial image of Sophia Lüders" loading="lazy" />
+            <span class="plate__hint" aria-hidden="true"><span class="plate__hint-label">Editorial</span><span class="plate__hint-file">images/editorial-01.jpg · 3:4</span></span>
+          </div>
+          <figcaption class="cap"><span class="cap__n">01</span><span>Editorial</span></figcaption>
+        </figure>
+        <figure class="work-item w2" data-cat="fashion">
+          <div class="plate" style="--ratio:3/4">
+            <img class="plate__img" src="images/fashion-01.jpg" alt="Fashion image of Sophia Lüders" loading="lazy" />
+            <span class="plate__hint" aria-hidden="true"><span class="plate__hint-label">Fashion</span><span class="plate__hint-file">images/fashion-01.jpg · 3:4</span></span>
+          </div>
+          <figcaption class="cap"><span class="cap__n">01</span><span>Fashion</span></figcaption>
+        </figure>
+        <figure class="work-item w3" data-cat="polas">
+          <div class="plate" style="--ratio:3/4">
+            <img class="plate__img" src="images/polas-01.jpg" alt="Polas image of Sophia Lüders" loading="lazy" />
+            <span class="plate__hint" aria-hidden="true"><span class="plate__hint-label">Polas</span><span class="plate__hint-file">images/polas-01.jpg · 3:4</span></span>
+          </div>
+          <figcaption class="cap"><span class="cap__n">01</span><span>Polas</span></figcaption>
+        </figure>
+        <figure class="work-item w3" data-cat="editorial">
+          <div class="plate" style="--ratio:3/4">
+            <img class="plate__img" src="images/editorial-02.jpg" alt="Editorial image of Sophia Lüders" loading="lazy" />
+            <span class="plate__hint" aria-hidden="true"><span class="plate__hint-label">Editorial</span><span class="plate__hint-file">images/editorial-02.jpg · 3:4</span></span>
+          </div>
+          <figcaption class="cap"><span class="cap__n">02</span><span>Editorial</span></figcaption>
+        </figure>
+        <figure class="work-item w3" data-cat="campaign">
+          <div class="plate" style="--ratio:3/4">
+            <img class="plate__img" src="images/campaign-01.jpg" alt="Campaign image of Sophia Lüders" loading="lazy" />
+            <span class="plate__hint" aria-hidden="true"><span class="plate__hint-label">Campaign</span><span class="plate__hint-file">images/campaign-01.jpg · 3:4</span></span>
+          </div>
+          <figcaption class="cap"><span class="cap__n">01</span><span>Campaign</span></figcaption>
+        </figure>
+        <figure class="work-item w2" data-cat="fashion">
+          <div class="plate" style="--ratio:3/4">
+            <img class="plate__img" src="images/fashion-02.jpg" alt="Fashion image of Sophia Lüders" loading="lazy" />
+            <span class="plate__hint" aria-hidden="true"><span class="plate__hint-label">Fashion</span><span class="plate__hint-file">images/fashion-02.jpg · 3:4</span></span>
+          </div>
+          <figcaption class="cap"><span class="cap__n">02</span><span>Fashion</span></figcaption>
+        </figure>
+        <figure class="work-item w2" data-cat="polas">
+          <div class="plate" style="--ratio:3/4">
+            <img class="plate__img" src="images/polas-02.jpg" alt="Polas image of Sophia Lüders" loading="lazy" />
+            <span class="plate__hint" aria-hidden="true"><span class="plate__hint-label">Polas</span><span class="plate__hint-file">images/polas-02.jpg · 3:4</span></span>
+          </div>
+          <figcaption class="cap"><span class="cap__n">02</span><span>Polas</span></figcaption>
+        </figure>
+        <figure class="work-item w2" data-cat="editorial">
+          <div class="plate" style="--ratio:3/4">
+            <img class="plate__img" src="images/editorial-03.jpg" alt="Editorial image of Sophia Lüders" loading="lazy" />
+            <span class="plate__hint" aria-hidden="true"><span class="plate__hint-label">Editorial</span><span class="plate__hint-file">images/editorial-03.jpg · 3:4</span></span>
+          </div>
+          <figcaption class="cap"><span class="cap__n">03</span><span>Editorial</span></figcaption>
+        </figure>
+        <figure class="work-item w2" data-cat="campaign">
+          <div class="plate" style="--ratio:3/4">
+            <img class="plate__img" src="images/campaign-02.jpg" alt="Campaign image of Sophia Lüders" loading="lazy" />
+            <span class="plate__hint" aria-hidden="true"><span class="plate__hint-label">Campaign</span><span class="plate__hint-file">images/campaign-02.jpg · 3:4</span></span>
+          </div>
+          <figcaption class="cap"><span class="cap__n">02</span><span>Campaign</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILM -->
+  <section class="section" id="film">
+    <div class="container">
+      <div class="folio reveal">
+        <span class="eyebrow">Film</span><span class="folio__idx">ii.</span>
+      </div>
+      <div class="film__frame reveal">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/mFQZsZCScG0?si=2cEGsARPOTnXtCzI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED IN -->
+  <section class="section" id="featured">
+    <div class="container">
+      <div class="folio reveal">
+        <span class="eyebrow">Featured In</span><span class="folio__idx">iii.</span>
+      </div>
+      <div class="featured__grid reveal">
+        <figure>
+          <div class="plate" style="--ratio:3/4">
+            <img class="plate__img" src="images/featured-01.jpg" alt="Magazine feature with Sophia Lüders" loading="lazy" />
+            <span class="plate__hint" aria-hidden="true"><span class="plate__hint-label">Featured</span><span class="plate__hint-file">images/featured-01.jpg · 3:4</span></span>
+          </div>
+        
+        </figure>
+        <figure>
+          <div class="plate" style="--ratio:3/4">
+            <img class="plate__img" src="images/featured-02.jpg" alt="Magazine feature with Sophia Lüders" loading="lazy" />
+            <span class="plate__hint" aria-hidden="true"><span class="plate__hint-label">Featured</span><span class="plate__hint-file">images/featured-02.jpg · 3:4</span></span>
+          </div>
+         
+        </figure>
+        <figure>
+          <div class="plate" style="--ratio:3/4">
+            <img class="plate__img" src="images/featured-03.jpg" alt="Magazine feature with Sophia Lüders" loading="lazy" />
+            <span class="plate__hint" aria-hidden="true"><span class="plate__hint-label">Featured</span><span class="plate__hint-file">images/featured-03.jpg · 3:4</span></span>
+          </div>
+         
+        </figure>
+        <figure>
+          <div class="plate" style="--ratio:3/4">
+            <img class="plate__img" src="images/featured-04.jpg" alt="Magazine feature with Sophia Lüders" loading="lazy" />
+            <span class="plate__hint" aria-hidden="true"><span class="plate__hint-label">Featured</span><span class="plate__hint-file">images/featured-04.jpg · 3:4</span></span>
+          </div>
+       
+        </figure>
+      </div>
+
+      <div class="logowall reveal">
+        <div class="logowall__row">
+          <span class="logo"><img class="logo__img" src="images/logo-01.svg" alt="" loading="lazy" /><span class="logo__ph">Logo 01</span></span>
+          <span class="logo"><img class="logo__img" src="images/logo-02.svg" alt="" loading="lazy" /><span class="logo__ph">Logo 02</span></span>
+          <span class="logo"><img class="logo__img" src="images/logo-03.svg" alt="" loading="lazy" /><span class="logo__ph">Logo 03</span></span>
+          <span class="logo"><img class="logo__img" src="images/logo-04.svg" alt="" loading="lazy" /><span class="logo__ph">Logo 04</span></span>
+          <span class="logo"><img class="logo__img" src="images/logo-05.svg" alt="" loading="lazy" /><span class="logo__ph">Logo 05</span></span>
+          <span class="logo"><img class="logo__img" src="images/logo-06.svg" alt="" loading="lazy" /><span class="logo__ph">Logo 06</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="folio reveal">
+        <span class="eyebrow">Campaigns</span><span class="folio__idx">iv.</span>
+      </div>
+      <div class="camp reveal">
+        <figure class="camp-wide">
+          <div class="plate" style="--ratio:16/9">
+            <img class="plate__img" src="images/campaigns-01.jpg" alt="Campaign billboard featuring Sophia Lüders" loading="lazy" />
+            <span class="plate__hint" aria-hidden="true"><span class="plate__hint-label">Billboard</span><span class="plate__hint-file">images/campaigns-01.jpg · 16:9</span></span>
+          </div>
+        
+        </figure>
+        <div class="camp__row">
+          <figure>
+            <div class="plate" style="--ratio:3/2">
+              <img class="plate__img" src="images/campaigns-02.jpg" alt="In-store campaign display featuring Sophia Lüders" loading="lazy" />
+              <span class="plate__hint" aria-hidden="true"><span class="plate__hint-label">In-store</span><span class="plate__hint-file">images/campaigns-02.jpg · 3:2</span></span>
+            </div>
+      
+          </figure>
+          <figure>
+            <div class="plate" style="--ratio:3/2">
+              <img class="plate__img" src="images/campaigns-03.jpg" alt="Advertising visual featuring Sophia Lüders" loading="lazy" />
+              <span class="plate__hint" aria-hidden="true"><span class="plate__hint-label">Advertising</span><span class="plate__hint-file">images/campaigns-03.jpg · 3:2</span></span>
+            </div>
+
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section section--ivory" id="about">
+    <div class="container">
+      <div class="folio reveal">
+        <span class="eyebrow">About</span><span class="folio__idx">v.</span>
+      </div>
+
+      <div class="about__grid">
+        <div class="reveal">
+          <div class="plate" style="--ratio:3/4">
+            <img class="plate__img" src="images/about.jpg" alt="Portrait of Sophia Lüders" loading="lazy" />
+            <span class="plate__hint" aria-hidden="true"><span class="plate__hint-label">About</span><span class="plate__hint-file">images/about.jpg · 3:4</span></span>
+          </div>
+        </div>
+
+        <div class="reveal d1">
+          <h3 class="mix about__lead">
+            <span class="ser">Sophia Lüders,</span> <span class="san">fashion model based in Munich.</span>
+          </h3>
+          <p class="about__para">Represented by Most Wanted Models, Munich, with Francina Models as mother agency. Selected work spans campaign and editorial, including denim for Guess in 2023.</p>
+        </div>
+      </div>
+
+      <div class="physique reveal">
+        <span class="eyebrow physique__title">Physique</span>
+        <dl class="physique__grid">
+          <div><dt>Height</dt><dd>177 cm / 5&#8242; 9&#189;&#8243;</dd></div>
+          <div><dt>Hair</dt><dd>Blonde</dd></div>
+          <div><dt>Eyes</dt><dd>Blue</dd></div>
+          <div><dt>Bust</dt><dd>84 cm / 33&#8243;</dd></div>
+          <div><dt>Cup</dt><dd>C</dd></div>
+          <div><dt>Waist</dt><dd>61 cm / 24&#8243;</dd></div>
+          <div><dt>Hips</dt><dd>91 cm / 36&#8243;</dd></div>
+          <div><dt>Shoes</dt><dd>38 EU / 7 US / 5 UK</dd></div>
+          <div><dt>Dress</dt><dd>34 / 36 EU · 2 / 4 US</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- REPRESENTATION -->
+  <section class="section" id="representation">
+    <div class="container">
+      <div class="folio reveal">
+        <span class="eyebrow">Representation</span><span class="folio__idx">vi.</span>
+      </div>
+      <div class="rep__list">
+        <a class="rep__item reveal" href="https://www.mostwantedmodels.com/women/all/1848-sophia-l/" target="_blank" rel="noopener">
+          <span class="rep__name">Most Wanted Models <span class="arrow">&#8599;</span></span>
+          <p class="rep__meta">Munich · Hamburg</p>
+        </a>
+        <a class="rep__item reveal d1" href="https://francinamodels.com/w/models/womdir/womdir-15274-sophia-l" target="_blank" rel="noopener">
+          <span class="rep__name">Francina Models <span class="arrow">&#8599;</span></span>
+          <p class="rep__meta">Barcelona · Mother Agency</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM -->
+  <section class="section section--ivory" id="instagram">
+    <div class="container">
+      <div class="folio reveal">
+        <span class="eyebrow">Instagram</span><span class="folio__idx">vii.</span>
+      </div>
+
+      <div class="insta__head reveal">
+        <p class="insta__lead">Latest from <a href="https://www.instagram.com/sosowave/" target="_blank" rel="noopener">@sosowave</a></p>
+        <a class="ig-cta" href="https://www.instagram.com/sosowave/" target="_blank" rel="noopener">Follow on Instagram &#8599;</a>
+      </div>
+
+      <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+      <script src="https://elfsightcdn.com/platform.js" async></script>
+      <div class="elfsight-app-037eec24-e612-4f0e-8a98-cbdd7cfa3441" data-elfsight-app-lazy></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="folio reveal">
+        <span class="eyebrow">Contact</span><span class="folio__idx">viii.</span>
+      </div>
+      <div class="contact__grid">
+        <div class="reveal">
+          <a class="contact__mail" href="mailto:sosowave@mostwantedmodels.com">sosowave@mostwantedmodels.com</a>
+        </div>
+        <div class="contact__side reveal d1">
+          <p>Bookings and enquiries via the agency.</p>
+          <a class="contact__ig" href="https://www.instagram.com/sosowave/" target="_blank" rel="noopener">Instagram, @sosowave &#8599;</a>
+          <p class="eyebrow" style="margin-top:1.5rem">Munich, Germany</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot" id="colophon">
+  <div class="container">
+    <p class="foot__name reveal">Sophia&nbsp;Lüders</p>
+    <div class="foot__cols">
+      <div class="foot__col">
+        <h4>Index</h4>
+        <ul>
+          <li><a href="#work">Selected Work</a></li>
+          <li><a href="#featured">Featured In</a></li>
+          <li><a href="#campaigns">Campaigns</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="foot__col">
+        <h4>Representation</h4>
+        <ul>
+          <li><a href="https://www.mostwantedmodels.com/women/all/1848-sophia-l/" target="_blank" rel="noopener">Most Wanted Models &#8599;</a></li>
+          <li><a href="https://francinamodels.com/w/models/womdir/womdir-15274-sophia-l" target="_blank" rel="noopener">Francina Models &#8599;</a></li>
+        </ul>
+      </div>
+      <div class="foot__col">
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/sosowave/" target="_blank" rel="noopener">Instagram, @sosowave &#8599;</a></li>
+          <li><a href="mailto:sosowave@mostwantedmodels.com">Email &#8599;</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot__bottom">
+      <span>&copy; <span id="yr">2026</span> Sophia Lüders</span>
+      <span>Munich, DE</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Image slots + logos reveal when loaded
+  document.querySelectorAll('.plate__img, .logo__img').forEach(function(img){
+    var box = img.closest('.plate') || img.closest('.logo');
+    function ok(){ if(img.naturalWidth>0 && box) box.classList.add('is-loaded'); }
+    if(img.complete) ok();
+    img.addEventListener('load', ok);
+  });
+
+  // Hamburger menu
+  (function(){
+    var head=document.getElementById('head'), burger=document.getElementById('burger'), menu=document.getElementById('menu');
+    function setOpen(open){
+      menu.classList.toggle('open', open);
+      head.classList.toggle('menu-open', open);
+      burger.setAttribute('aria-expanded', open);
+      burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+    burger.addEventListener('click', function(){ setOpen(!menu.classList.contains('open')); });
+    menu.addEventListener('click', function(e){ if(e.target.tagName==='A') setOpen(false); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') setOpen(false); });
+    // Header turns solid once past the hero
+    var hero=document.querySelector('.hero');
+    function solid(){ var t=hero?hero.offsetHeight-90:60; head.classList.toggle('is-solid', window.scrollY>t); }
+    addEventListener('scroll', solid, {passive:true}); addEventListener('resize', solid); solid();
+  })();
+
+  // Scroll reveals
+  (function(){
+    var items=document.querySelectorAll('.reveal');
+    var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduce || !('IntersectionObserver' in window)){ items.forEach(function(el){el.classList.add('in')}); return; }
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+    items.forEach(function(el){io.observe(el)});
+    window.addEventListener('load', function(){ items.forEach(function(el){ if(el.getBoundingClientRect().top < innerHeight) el.classList.add('in'); }); });
+  })();
+
+  // Selected Work category filter
+  (function(){
+    var bar=document.querySelector('.work__filters'); if(!bar) return;
+    var grid=document.getElementById('workGallery');
+    var items=grid.querySelectorAll('.work-item');
+    bar.addEventListener('click', function(e){
+      var btn=e.target.closest('.work__filter'); if(!btn) return;
+      var cat=btn.getAttribute('data-filter');
+      bar.querySelectorAll('.work__filter').forEach(function(b){ b.setAttribute('aria-pressed', b===btn ? 'true':'false'); });
+      grid.classList.add('is-filtering');
+      setTimeout(function(){
+        items.forEach(function(it){
+          var show = cat==='all' || it.getAttribute('data-cat')===cat;
+          it.classList.toggle('is-hidden', !show);
+        });
+        grid.classList.remove('is-filtering');
+      }, 200);
+    });
+  })();
+
+  // Subtle hero parallax
+  (function(){
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var media=document.querySelector('.hero__media'); if(!media) return;
+    var ticking=false;
+    addEventListener('scroll', function(){
+      if(ticking) return; ticking=true;
+      requestAnimationFrame(function(){
+        var y=scrollY; if(y<innerHeight) media.style.transform='translateY('+(y*0.12)+'px) scale(1.05)';
+        ticking=false;
+      });
+    }, {passive:true});
+  })();
+</script>
+</body>
+</html>
