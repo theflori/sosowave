@@ -13,13 +13,14 @@
     Campaigns:  campaigns-01.jpg (16:9)  campaigns-02.jpg (3:2)  campaigns-03.jpg (3:2)
     Film: YouTube-Embed (kein Bild)
   Fehlt eine Datei, bleibt ein ruhiger Platzhalter stehen.
-  Instagram lädt live über die drei Post-Links im Instagram-Bereich.
+  Instagram lädt live über das Elfsight-Widget im Instagram-Bereich.
+  Logos (Clients & Publications), optional: images/logo-01..06.svg
   ==================================================================
 -->
 <html lang="de">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, flogowallinitial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Sophia Lüders, Fashion Model in Munich</title>
 <meta name="description" content="Sophia Lüders, an international model working across high-fashion editorials, magazine covers and global campaigns. Represented by Most Wanted Models and Francina Models." />
 <meta name="author" content="Sophia Lüders" />
@@ -96,6 +97,7 @@
     margin-bottom:clamp(2.25rem,5vw,4rem)}
   .folio__idx{font-family:var(--serif);font-style:italic;font-weight:300;
     font-size:1rem;color:var(--mute)}
+  .folio--sub{margin-top:clamp(3.5rem,7vw,6rem);scroll-margin-top:5rem}
 
   /* ---------- mixed headline ---------- */
   .mix{line-height:1.12;letter-spacing:-.006em;color:var(--ink)}
@@ -297,8 +299,8 @@
      FOOTER
   ========================================================= */
   /* LOGO WALL */
-  .logowall{padding:clamp(2rem,4vw,3rem);
-    ;text-align:center}
+  .logowall{margin-top:clamp(2.75rem,6vw,4.5rem);padding-top:clamp(2.25rem,4vw,3rem);
+    border-top:1px solid var(--line);text-align:center}
   .logowall__title{display:block;margin-bottom:clamp(1.75rem,3.5vw,2.5rem)}
   .logowall__row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
     gap:clamp(1.75rem,5vw,4rem)}
@@ -439,7 +441,6 @@
 
     <div class="hero__topline">
       <span class="eyebrow" style="color:#fff">Fashion Model</span>
-      <span class="eyebrow" style="color:#fff">Munich, DE</span>
     </div>
 
     <div class="hero__inner">
@@ -549,12 +550,12 @@
         <span class="eyebrow">Film</span><span class="folio__idx">ii.</span>
       </div>
       <div class="film__frame reveal">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/mFQZsZCScG0?si=2cEGsARPOTnXtCzI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/mFQZsZCScG0?si=V085dtdRhPbOz5bV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
   </section>
 
-  <!-- FEATURED IN -->
+  <!-- FEATURED IN + CAMPAIGNS -->
   <section class="section" id="featured">
     <div class="container">
       <div class="folio reveal">
@@ -566,32 +567,29 @@
             <img class="plate__img" src="images/featured-01.jpg" alt="Magazine feature with Sophia Lüders" loading="lazy" />
             <span class="plate__hint" aria-hidden="true"><span class="plate__hint-label">Featured</span><span class="plate__hint-file">images/featured-01.jpg · 3:4</span></span>
           </div>
-        
         </figure>
         <figure>
           <div class="plate" style="--ratio:3/4">
             <img class="plate__img" src="images/featured-02.jpg" alt="Magazine feature with Sophia Lüders" loading="lazy" />
             <span class="plate__hint" aria-hidden="true"><span class="plate__hint-label">Featured</span><span class="plate__hint-file">images/featured-02.jpg · 3:4</span></span>
           </div>
-         
         </figure>
         <figure>
           <div class="plate" style="--ratio:3/4">
             <img class="plate__img" src="images/featured-03.jpg" alt="Magazine feature with Sophia Lüders" loading="lazy" />
             <span class="plate__hint" aria-hidden="true"><span class="plate__hint-label">Featured</span><span class="plate__hint-file">images/featured-03.jpg · 3:4</span></span>
           </div>
-         
         </figure>
         <figure>
           <div class="plate" style="--ratio:3/4">
             <img class="plate__img" src="images/featured-04.jpg" alt="Magazine feature with Sophia Lüders" loading="lazy" />
             <span class="plate__hint" aria-hidden="true"><span class="plate__hint-label">Featured</span><span class="plate__hint-file">images/featured-04.jpg · 3:4</span></span>
           </div>
-       
         </figure>
       </div>
 
       <div class="logowall reveal">
+        <span class="eyebrow logowall__title">Clients &amp; Publications</span>
         <div class="logowall__row">
           <span class="logo"><img class="logo__img" src="images/logo-01.svg" alt="" loading="lazy" /><span class="logo__ph">Logo 01</span></span>
           <span class="logo"><img class="logo__img" src="images/logo-02.svg" alt="" loading="lazy" /><span class="logo__ph">Logo 02</span></span>
@@ -601,10 +599,8 @@
           <span class="logo"><img class="logo__img" src="images/logo-06.svg" alt="" loading="lazy" /><span class="logo__ph">Logo 06</span></span>
         </div>
       </div>
-    </div>
 
-    <div class="container">
-      <div class="folio reveal">
+      <div class="folio folio--sub reveal" id="campaigns">
         <span class="eyebrow">Campaigns</span><span class="folio__idx">iv.</span>
       </div>
       <div class="camp reveal">
@@ -613,7 +609,6 @@
             <img class="plate__img" src="images/campaigns-01.jpg" alt="Campaign billboard featuring Sophia Lüders" loading="lazy" />
             <span class="plate__hint" aria-hidden="true"><span class="plate__hint-label">Billboard</span><span class="plate__hint-file">images/campaigns-01.jpg · 16:9</span></span>
           </div>
-        
         </figure>
         <div class="camp__row">
           <figure>
@@ -621,14 +616,12 @@
               <img class="plate__img" src="images/campaigns-02.jpg" alt="In-store campaign display featuring Sophia Lüders" loading="lazy" />
               <span class="plate__hint" aria-hidden="true"><span class="plate__hint-label">In-store</span><span class="plate__hint-file">images/campaigns-02.jpg · 3:2</span></span>
             </div>
-      
           </figure>
           <figure>
             <div class="plate" style="--ratio:3/2">
               <img class="plate__img" src="images/campaigns-03.jpg" alt="Advertising visual featuring Sophia Lüders" loading="lazy" />
               <span class="plate__hint" aria-hidden="true"><span class="plate__hint-label">Advertising</span><span class="plate__hint-file">images/campaigns-03.jpg · 3:2</span></span>
             </div>
-
           </figure>
         </div>
       </div>
@@ -725,7 +718,6 @@
         <div class="contact__side reveal d1">
           <p>Bookings and enquiries via the agency.</p>
           <a class="contact__ig" href="https://www.instagram.com/sosowave/" target="_blank" rel="noopener">Instagram, @sosowave &#8599;</a>
-          <p class="eyebrow" style="margin-top:1.5rem">Munich, Germany</p>
         </div>
       </div>
     </div>
